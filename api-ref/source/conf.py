@@ -93,7 +93,7 @@ html_static_path = ['_static']
 
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
-('index',
+    ('index',
      'swr-api-ref.tex',
      u'Software Repository for Containers - API Reference',
      u'OpenTelekomCloud', 'manual'),
