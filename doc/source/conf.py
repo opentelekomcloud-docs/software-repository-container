@@ -19,14 +19,17 @@ import sys
 
 extensions = [
     'otcdocstheme',
+    'otc_sphinx_directives'
 ]
 
 otcdocs_auto_name = False
 otcdocs_auto_version = False
 
 project = 'Software Repository for Containers'
-otcdocs_repo_name = 'opentelekomcloud-docs/software-repository-container'
+otcdocs_repo_name = 'docs/software-repository-container'
 # Those variables are required for edit/bug links
+otcdocs_git_fqdn = 'gitea.eco.tsi-dev.otc-service.com'
+otcdocs_git_type = 'gitea'
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -76,12 +79,15 @@ html_theme = 'otcdocs'
 # further. For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
+    "disable_search": True,
+    "site_name": "Internal Documentation Portal",
+    "logo_url": "https://docs-int.otc-service.com",
 }
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 
-html_title = "Software Repository for Containers - User Guide"
+html_title = "Software Repository for Containers - Service Based View"
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -89,10 +95,8 @@ html_title = "Software Repository for Containers - User Guide"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+# Do not include sources into the rendered results
+html_copy_source = False
+
 # -- Options for PDF output --------------------------------------------------
-latex_documents = [
-    ('index',
-     'swr-umn.tex',
-     u'Software Repository for Containers - User Guide',
-     u'OpenTelekomCloud', 'manual'),
-]
+latex_documents = []
