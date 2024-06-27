@@ -62,12 +62,6 @@ Procedure
 
    In the command, the regional project name and image repository address are obtained in :ref:`Step 1 <swr_01_1000__li5768123671815>`, the AK in :ref:`Step 2 <swr_01_1000__li1863783911295>`, and the login key in :ref:`Step 3 <swr_01_1000__li132430753010>`.
 
-
-   .. figure:: /_static/images/en-us_image_0000001154534788.png
-      :alt: **Figure 2** Long-term login command
-
-      **Figure 2** Long-term login command
-
    .. note::
 
       The login key is encrypted and cannot be decrypted. Therefore, other users cannot obtain the SK from -p.
