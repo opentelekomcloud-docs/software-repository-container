@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'swr-best-practice.tex',
-     u'Software Repository for Containers - Best Practice',
+    u'Software Repository for Containers - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 

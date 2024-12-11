@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'swr-umn.tex',
-     u'Software Repository for Containers - User Guide',
+    u'Software Repository for Containers - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 

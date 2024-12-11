@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'swr-api-ref.tex',
-     u'Software Repository for Containers - API Reference',
+    u'Software Repository for Containers - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
