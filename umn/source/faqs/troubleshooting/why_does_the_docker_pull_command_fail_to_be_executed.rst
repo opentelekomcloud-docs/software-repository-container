@@ -5,14 +5,14 @@
 Why Does the **docker pull** Command Fail to Be Executed?
 =========================================================
 
-x509: certificate sigined by unknown authority
-----------------------------------------------
+x509: certificate signed by unknown authority
+---------------------------------------------
 
-**Problem**: When you run the **docker pull** command to pull an image from SWR, error message "x509: certificate signed by unknown certificates" is displayed.
+**Problem**: When you run the **docker pull** command to pull an image from SWR, error message "x509: certificate signed by unknown authority" is displayed.
 
 **Possible Causes**:
 
--  A container engine client and SWR communicate with each other using HTTPS. When the client verifies the server certificate and finds that the root certificate installed on the client is incomplete, the error message "x509: certificate signed by unknown certificates" is displayed.
+-  A container engine client and SWR communicate with each other using HTTPS. When the client verifies the server certificate and finds that the root certificate installed on the client is incomplete, the error message "x509: certificate signed by unknown authority" is displayed.
 -  A proxy is configured on the container engine client.
 
 **Solution**:
@@ -45,3 +45,14 @@ Error: remote trust data does not exist
 **Possible cause**: The image signature verification is enabled on the client. However, the image to be pulled does not contain a signature layer.
 
 **Solution**: Check whether the environment variable **DOCKER_CONTENT_TRUST** is set to **1**. If yes, delete **DOCKER_CONTENT_TRUST=1** from the **/etc/profile** file and run the **source /etc/profile** command to make the modification take effect.
+
+denied: Not allow to login, upload or download image
+----------------------------------------------------
+
+**Symptom**: When you pull an image from SWR through your container engine client, the operation fails with the following error message:
+
+**Not allow to login, upload or download image**
+
+**Possible cause**: You concurrently uploaded large numbers of images or frequently requested access to the service, and the system blacklisted you.
+
+**Solution:** Try again 30 minutes later.

@@ -8,7 +8,7 @@ Application Scenarios
 Image Lifecycle Management
 --------------------------
 
-You can use SWR to build, push, pull, synchronize, and delete container images.
+You can use SWR to build, push, pull, and delete container images.
 
 **Advantages**
 

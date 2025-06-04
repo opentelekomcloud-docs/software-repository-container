@@ -19,3 +19,9 @@ Quotas are imposed on the number of organizations a user can create. :ref:`Table
    ============= =====
    Organization  5
    ============= =====
+
+Requirements on Images to Upload
+--------------------------------
+
+-  If you use a container engine client to push images to SWR, the total number of image layers cannot exceed 20 at a time.
+-  If you use a container engine client to push images to SWR, each image layer cannot exceed 10 GB.

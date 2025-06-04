@@ -2,10 +2,14 @@
 
 .. _swr_01_0006:
 
-Basics of the Container Engine
-==============================
+Basics of Docker
+================
 
-The container engine, namely, Docker, is an open-source engine which allows you to create a lightweight, portable, and self-sufficient container for any application. SWR is compatible with Docker, allowing you to use Docker CLI and APIs to manage your images.
+A container engine is an open-source engine which allows you to create a lightweight, portable, and self-sufficient container for any application.
+
+A container engine is one of the most important Kubernetes components. It is used to manage the lifecycle of images and containers. You can use it to create lightweight, portable, and self-sufficient containers for any application easily.
+
+SWR supports two types of container engines: Docker and containerd. This section uses Docker as an example to describe how to install a container engine and use it to create an image file.
 
 Installing Docker
 -----------------
@@ -16,7 +20,7 @@ Docker is compatible with almost all operating systems. Select a Docker version 
 
 .. note::
 
-   -  Before using SWR to store container images, ensure that the Docker client used to push images to SWR is updated to 1.11.2 or later.
+   -  To use Docker to push images to SWR, the Docker version must be between 1.11.2 (included) and 24.0.9 (included).
    -  Bind an elastic IP address first if your server runs in a private network as the installation requires Internet connection.
 
 On a device running Linux, run the following commands to quickly install Docker:

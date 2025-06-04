@@ -90,5 +90,9 @@ Possible causes are as follows:
 
    After the configuration, run the **systemctl restart docker** command to restart the container engine.
 
+6. **denied: Not allow to login, upload or download image**
+
+   If you concurrently upload large numbers of images or frequently request access to the service, the system will blacklist you. As a result, you cannot log in to the system or upload or download images. Try again 30 minutes later.
+
 .. |image1| image:: /_static/images/en-us_image_0168961239.png
 .. |image2| image:: /_static/images/en-us_image_0000001137013964.png

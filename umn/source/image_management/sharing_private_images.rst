@@ -8,9 +8,11 @@ Sharing Private Images
 Scenario
 --------
 
-You can share your **private images** with other users and grant the users access permissions.
+You can share your **private images** with other accounts and grant the accounts permissions to pull the images.
 
-The user with whom you shared the image can then log in to SWR console to view the image by clicking **My Images > Shared Images**. On the tab page, the user can click the target image to check its detailed information, including the image tag and image pull command.
+A user under the account with which you shared the image can then log in to the SWR console to view the image by clicking **My Images** > **Images From Others**. On the tab, the user can click the target image to check its details, such as the image tag and image pull command.
+
+.. _swr_01_0026__section15251822105111:
 
 Notes and Constraints
 ---------------------
@@ -18,23 +20,18 @@ Notes and Constraints
 -  Only private images can be shared. Public images cannot be shared.
 -  Only users authorized to manage the private images can share images. The users with whom you share your images only have the read-only permission, which only allows them to pull the images.
 -  You can share images only with accounts in the same region. Cross-region image sharing is not supported.
+-  A private image can be shared with a maximum of 500 tenants.
 
 Procedure
 ---------
 
 #. Log in to the SWR console.
 
-#. In the navigation pane, choose **My Images** and click the target image.
+#. In the navigation pane, choose **My Images**. Then click the name of the target image.
 
 #. On the details page, click the **Sharing** tab.
 
 #. Click **Share Image**. Set parameters based on :ref:`Table 1 <swr_01_0026__table15531841319>`, and click **OK**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001200681339.png
-      :alt: **Figure 1** Sharing an image
-
-      **Figure 1** Sharing an image
 
    .. _swr_01_0026__table15531841319:
 
@@ -52,4 +49,4 @@ Procedure
       | Permission  | Only the **Pull** permission is supported currently.                                                                    |
       +-------------+-------------------------------------------------------------------------------------------------------------------------+
 
-#. To view all the images that you have shared, choose **My Images** in the navigation pane, click the **Private Images** tab, and select **Display only shared images**.
+#. To view all the images that you have shared, choose **My Images** in the navigation pane, click the **Private Images** tab, and select **My shared images**.

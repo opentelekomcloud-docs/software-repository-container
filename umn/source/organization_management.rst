@@ -10,7 +10,7 @@ Scenario
 
 Organizations enable efficient management of images. Organizations are used to isolate image repositories. With each organization being limited to one company or department, images can be managed in a centralized and efficient manner. An image name needs to be unique within an organization. The same user can access different organizations as long as the user has sufficient permissions, as shown in :ref:`Figure 1 <swr_01_0014__fig1924953913304>`.
 
-You can grant different permissions, namely, read, write, and manage, to users created by the same account. For details, see :ref:`User Permissions <swr_01_0015>`.
+You can grant different permissions, namely, read, write, and manage, to users created by the same account. For details, see :ref:`Configuring Image Permissions <swr_01_0015>`.
 
 .. _swr_01_0014__fig1924953913304:
 
