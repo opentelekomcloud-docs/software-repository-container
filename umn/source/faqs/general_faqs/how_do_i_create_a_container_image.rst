@@ -17,7 +17,11 @@ Approach 1: Creating a Snapshot
 
 This approach is suitable for images that will only be updated occasionally.
 
-|image1|
+
+.. figure:: /_static/images/en-us_image_0165153802.png
+   :alt: **Figure 1** Creating a snapshot
+
+   **Figure 1** Creating a snapshot
 
 Procedure:
 
@@ -65,7 +69,11 @@ This approach is suitable for images that will be frequently updated. In :ref:`A
 
 The idea behind :ref:`Approach 2 <swr_faq_0012__section1690134131216>` is to write the process of :ref:`Approach 1 <swr_faq_0012__section1017412550210>` into a Dockerfile and then run the **docker build -t test/image:tag.** command to automatically build an image from the Dockerfile. In the preceding command, **.** indicates the path to the Dockerfile.
 
-|image2|
+
+.. figure:: /_static/images/en-us_image_0165153805.png
+   :alt: **Figure 2** Creating a Dockerfile to build an image
+
+   **Figure 2** Creating a Dockerfile to build an image
 
 Example Dockerfile:
 
@@ -111,7 +119,7 @@ Example Dockerfile:
 
    # Setting the trigger operation for a sub-image
    ONBUILD ADD . /app/src
-   ONBUILD RUN echo "on build excuted" >> onbuild.txt
+   ONBUILD RUN echo "on build executed" >> onbuild.txt
 
 Basic Syntax of Dockerfile
 --------------------------
@@ -199,6 +207,3 @@ Basic Syntax of Dockerfile
    Using the FROM instruction to build a child image based on the parent image created by the Dockerfile:
 
    **ONBUILD ADD. /app/src**: The **ADD. /app/src** command is automatically executed.
-
-.. |image1| image:: /_static/images/en-us_image_0165153802.png
-.. |image2| image:: /_static/images/en-us_image_0165153805.png

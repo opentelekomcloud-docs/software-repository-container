@@ -14,11 +14,10 @@ Ease of Use
 Security and Reliability
 ------------------------
 
--  SWR supports HTTPS to ensure secure image transmission, and provides multiple security isolation mechanisms between and inside accounts.
+-  SWR uses HTTPS to secure image transmission, and provides multiple isolation mechanisms between and inside accounts to control access to images.
 -  Based on professional storage services, SWR provides highly reliable storage service for your container images.
 
 Image Acceleration
 ------------------
 
--  SWR uses the P2P image download acceleration technology to ensure faster image pull for CCE clusters in high concurrency scenarios.
--  Intelligent node scheduling around the globe ensures that your image build tasks can be automatically assigned to the idle nodes nearest to the image repository.
+SWR uses the image pull acceleration technology to ensure faster image pull for CCE clusters in high concurrency scenarios.

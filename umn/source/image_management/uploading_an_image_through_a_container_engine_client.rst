@@ -2,23 +2,18 @@
 
 .. _swr_01_0011:
 
-Uploading an Image Through the Client
-=====================================
+Uploading an Image Through a Container Engine Client
+====================================================
 
 Scenario
 --------
 
-This section walks you through the steps of uploading an image to SWR through the client by taking the **nginx:v1** image built in :ref:`Basics of the Container Engine <swr_01_0006>` as an example. Uploading an image through the client is to run Docker commands on the client where Docker is installed to push the image to an image repository of SWR.
+You can run **docker push** (Docker) or **ctr push** (containerd) on the server where the container engine client is installed to push an image to SWR.
 
-.. note::
+Constraints
+-----------
 
-   Each image layer uploaded through the client cannot exceed 10 GB.
-
-Notes and Constraints
----------------------
-
--  Each image layer uploaded through the client cannot exceed 10 GB.
--  The Docker client version must be 1.11.2 or later.
+If you use Docker, the Docker version must be between 1.11.2 (included) and 24.0.9 (included). The size of each image layer cannot exceed 10 GB. You can push a maximum of 20 image layers concurrently.
 
 Prerequisites
 -------------
@@ -36,13 +31,7 @@ Prerequisites
              ]
          }
 
-      To obtain the value of {*Intranet address*}, log in to the SWR console. On the **Dashboard** page, click **Generate Login Command** and obtain the private network address (IP:20202) in the private network command.
-
-
-      .. figure:: /_static/images/en-us_image_0000001201043047.png
-         :alt: **Figure 1** Obtaining the private network address
-
-         **Figure 1** Obtaining the private network address
+      To obtain the value of {*Intranet address*}, log in to the SWR console. On the **Dashboard** page, click **Generate Login Command** and obtain the private network address in the private network command.
 
       .. note::
 
@@ -64,28 +53,24 @@ Prerequisites
 
       **sudo systemctl restart docker**
 
-Procedure
----------
+Docker
+------
+
+The following walks you through the steps of uploading an image to SWR through the client by taking the **nginx:v1** image built in :ref:`Basics of Docker <swr_01_0006>` as an example.
 
 #. .. _swr_01_0011__en-us_topic_0112596104_en-us_topic_0075378957_li58001655123:
 
    Access SWR.
 
-   a. Log in to the SWR console and the VM running the container engine as the **root** user.
+   a. Log in to the SWR console and then the VM running Docker as the **root** user.
 
-   b. .. _swr_01_0011__en-us_topic_0112596104_li182568055016:
+   b. .. _swr_01_0011__li753764116129:
 
-      In the navigation pane on the left, choose **My Images** and then click **Upload Through Client**. On the page displayed, click **Generate a temporary docker login command** and click |image1| to copy the command.
-
-
-      .. figure:: /_static/images/en-us_image_0000001200577091.png
-         :alt: **Figure 2** Obtaining a **docker login** command
-
-         **Figure 2** Obtaining a **docker login** command
+      In the navigation pane, choose **Dashboard** and click **Generate Login Command** in the upper right corner. On the displayed page, click |image1| to copy the login command.
 
       .. note::
 
-         -  A temporary login command is valid for 24 hours. For details about how to obtain a login command that will remain valid for a long term, see :ref:`Obtaining a Long-Term Valid Login Command <swr_01_1000>`. After you obtain a long-term valid login command, your temporary login commands will still be valid as long as they are in their validity periods.
+         -  A temporary login command is valid for 24 hours. For details about how to obtain a login command that will remain valid for a long term, see :ref:`Obtaining a Long-Term Valid Docker Login Command <swr_01_1000>`. After you obtain a long-term valid login command, your temporary login commands will still be valid as long as they are in their validity periods.
          -  The domain name at the end of the login command is the image repository address. Record the address for later use.
 
    c. Run the **docker login** command on your Docker client (a device that has Docker installed).
@@ -98,8 +83,8 @@ Procedure
 
    In the preceding command:
 
-   -  [Image name 1:tag 1]: Replace it with the actual name and tag of the image to upload.
-   -  [Image repository address]: You can query the address on the SWR console, that is, the domain name at the end of the login command in :ref:`1.b <swr_01_0011__en-us_topic_0112596104_li182568055016>`.
+   -  [Image name 1:tag 1]: Replace it with the actual name and tag of the image to be pushed.
+   -  [Image repository address]: You can query the address on the SWR console. It is the domain name at the end of the login command in :ref:`1.b <swr_01_0011__li753764116129>`.
    -  [Organization name]: Replace it with the name of the organization created.
    -  [Image name 2: tag 2]: Replace it with the desired image name and tag.
 
@@ -126,4 +111,28 @@ Procedure
 
    To view the pushed image, refresh the **My Images** page.
 
-.. |image1| image:: /_static/images/en-us_image_0143894038.png
+containerd
+----------
+
+#. Log in to the SWR console.
+
+#. In the navigation pane, choose **My Images**. Then click the name of the target image.
+
+#. .. _swr_01_0011__li16192124154316:
+
+   On the **Pull/Push** tab, click **Generate Push Command** and copy the command.
+
+   .. note::
+
+      The command is only valid for six hours after it is generated. To obtain a long-term valid command, see :ref:`Obtaining a Long-Term Valid containerd Pull/Push Command <swr_01_1001>`.
+
+#. Log in to the VM running containerd as the **root** user.
+
+#. Run the command copied in :ref:`3 <swr_01_0011__li16192124154316>`.
+
+   |image2|
+
+#. Check whether the image is pushed successfully.
+
+.. |image1| image:: /_static/images/en-us_image_0000002319267849.png
+.. |image2| image:: /_static/images/en-us_image_0000002037092213.png

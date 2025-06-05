@@ -6,10 +6,10 @@ Software Repository for Containers - User Guide
    :maxdepth: 1
 
    service_overview/index
-   introduction
-   basics_of_the_container_engine
-   image_management/index
+   overview
+   permissions_management/index
+   basics_of_docker
    organization_management
-   user_permissions
+   image_management/index
    faqs/index
    change_history
