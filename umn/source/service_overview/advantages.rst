@@ -20,5 +20,4 @@ Security and Reliability
 Image Acceleration
 ------------------
 
--  SWR uses the P2P image download acceleration technology to ensure faster image pull for CCE clusters in high concurrency scenarios.
--  Intelligent node scheduling around the globe ensures that your image build tasks can be automatically assigned to the idle nodes nearest to the image repository.
+SWR uses the image pull acceleration technology to ensure faster image pull for CCE clusters in high concurrency scenarios.

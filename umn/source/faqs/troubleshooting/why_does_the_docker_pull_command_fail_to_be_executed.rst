@@ -17,7 +17,7 @@ x509: certificate signed by unknown authority
 
 **Solution**:
 
--  If you trust the server, skip certificate authentication. Specifically, manually configure the container engine startup parameters using either of the following two methods. Replace *Image repository address* with the actual SWR repository address.
+-  If you trust the server and skip certificate authentication, manually configure the startup parameters for the container engine using either of the following methods (use the actual image repository address):
 
    -  Add the following configuration to the **/etc/docker/daemon.json** file. If the file does not exist, manually create it. Ensure that two-space indents are used in the configuration.
 
@@ -33,7 +33,7 @@ x509: certificate signed by unknown authority
 
          INSECURE_REGISTRY='--insecure-registry=Image repository address'
 
-   After configuration, run the **systemctl restart docker** or **service restart docker** command to restart the container engine.
+   After configuration, run the **systemctl restart docker** or **service docker start** command to restart the container engine.
 
 -  Run the **docker info** command to check whether the proxy is correctly configured. If not, modify the configuration.
 

@@ -27,19 +27,13 @@ Creating an Organization
 You can create organizations based on the organizational structure of your enterprise to facilitate image resource management. Create an organization before you push an image.
 
 #. Log in to the SWR console.
-
-#. In the navigation pane on the left, choose **Organization Management** and click **Create Organization**. On the page displayed, specify **Organization Name** and click **OK**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001200800369.png
-      :alt: **Figure 2** Creating an Organization
-
-      **Figure 2** Creating an Organization
+#. In the navigation pane, choose **Organizations**. Click **Create Organization**. On the page displayed, specify **Name** and click **OK**.
 
    .. note::
 
       -  The organization name must be globally unique. If a message is displayed indicating that the organization already exists, the organization name may have been used by another user. Use another organization name.
       -  After a tenant is deleted, residual organization resources may exist. In this case, the message indicating that the organization already exists could also be displayed when you create an organization. Use another organization name.
+      -  The organization name cannot be **library**, which is reserved for the system.
 
 Viewing the Images of an Organization
 -------------------------------------
@@ -47,16 +41,8 @@ Viewing the Images of an Organization
 After you create an organization and push images to it, you can view the image list of the organization.
 
 #. Log in to the SWR console.
-
-#. In the navigation pane, choose **Organization Management**. On the page displayed, click the desired organization name in the list.
-
-#. To view the images of this organization, click the **Image** tab.
-
-
-   .. figure:: /_static/images/en-us_image_0000001154966988.png
-      :alt: **Figure 3** Viewing the Images of an Organization
-
-      **Figure 3** Viewing the Images of an Organization
+#. In the navigation pane, choose **Organizations**. On the page displayed, click the desired organization name in the list.
+#. To view the images of this organization, click the **Images** tab.
 
 Deleting an Organization
 ------------------------
@@ -64,9 +50,11 @@ Deleting an Organization
 Before deleting an organization, delete all the images in the organization.
 
 #. Log in to the SWR console.
-#. In the navigation pane, choose **Organization Management**. On the page displayed, click the desired organization name in the list.
-#. Click **Delete** in the upper right corner. In the displayed dialog box, enter **DELETE** as prompted and click **Yes**.
+#. In the navigation pane, choose **Organizations**. On the page displayed, click the desired organization name in the list.
+#. Click |image1| and then click **Yes**.
 
 .. important::
 
    Before you delete a tenant, delete its organizations first; otherwise, residual organization resources may exist. When you create an organization that has the same name with the residual organization, a message is displayed indicating that the organization already exists.
+
+.. |image1| image:: /_static/images/en-us_image_0000002319439097.png

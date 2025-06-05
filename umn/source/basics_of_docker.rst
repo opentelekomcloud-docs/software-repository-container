@@ -119,3 +119,20 @@ This section describes how to compress a container image into a .tar or .tar.gz 
 
       $ docker save -o nginx-all.tar nginx
       $ docker save -o nginx-latest.tar nginx:latest
+
+Importing an Image File
+-----------------------
+
+This section describes how to import an image package as an image using the **docker load** command.
+
+There are two modes:
+
+**docker load <** **Path/File name.tar**
+
+**docker load --input** **Path/File name.tar** or **docker load -i** **Path/File name.tar**
+
+Sample:
+
+.. code-block::
+
+   $ docker load --input fedora.tar

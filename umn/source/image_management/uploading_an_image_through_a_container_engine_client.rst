@@ -2,23 +2,18 @@
 
 .. _swr_01_0011:
 
-Uploading an Image Through the Client
-=====================================
+Uploading an Image Through a Container Engine Client
+====================================================
 
 Scenario
 --------
 
-This section walks you through the steps of uploading an image to SWR through the client by taking the **nginx:v1** image built in :ref:`Basics of the Container Engine <swr_01_0006>` as an example. Uploading an image through the client is to run Docker commands on the client where Docker is installed to push the image to an image repository of SWR.
+You can run **docker push** (Docker) or **ctr push** (containerd) on the server where the container engine client is installed to push an image to SWR.
 
-.. note::
+Constraints
+-----------
 
-   Each image layer uploaded through the client cannot exceed 10 GB.
-
-Notes and Constraints
----------------------
-
--  Each image layer uploaded through the client cannot exceed 10 GB.
--  The Docker client version must be 1.11.2 or later.
+If you use Docker, the Docker version must be between 1.11.2 (included) and 24.0.9 (included). The size of each image layer cannot exceed 10 GB. You can push a maximum of 20 image layers concurrently.
 
 Prerequisites
 -------------
@@ -36,13 +31,7 @@ Prerequisites
              ]
          }
 
-      To obtain the value of {*Intranet address*}, log in to the SWR console. On the **Dashboard** page, click **Generate Login Command** and obtain the private network address (IP:20202) in the private network command.
-
-
-      .. figure:: /_static/images/en-us_image_0000001201043047.png
-         :alt: **Figure 1** Obtaining the private network address
-
-         **Figure 1** Obtaining the private network address
+      To obtain the value of {*Intranet address*}, log in to the SWR console. On the **Dashboard** page, click **Generate Login Command** and obtain the private network address in the private network command.
 
       .. note::
 

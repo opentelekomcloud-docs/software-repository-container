@@ -26,9 +26,9 @@ Features
 
    Private image repository and fine-grained permission management allow you to grant different access permissions, namely, read, write, and edit, to different users.
 
--  **P2P acceleration of large scale image distribution**
+-  **Large scale image pull acceleration**
 
-   SWR uses the image download acceleration technology to ensure faster image pull for CCE clusters in high concurrency scenarios.
+   SWR uses the image pull acceleration technology to ensure faster image pull for CCE clusters in high concurrency scenarios.
 
 Accessing SWR
 -------------
