@@ -6,7 +6,7 @@ Image Management
 ================
 
 -  :ref:`Uploading an Image Through a Container Engine Client <swr_01_0011>`
--  :ref:`Obtaining a Long-Term Valid Docker Login Command <swr_01_1000>`
+-  :ref:`Obtaining a Long-Term Docker Login Command <swr_01_1000>`
 -  :ref:`Obtaining a Long-Term Valid containerd Pull/Push Command <swr_01_1001>`
 -  :ref:`Pulling an Image <swr_01_0017>`
 -  :ref:`Setting Image Attributes <swr_01_0016>`
@@ -18,7 +18,7 @@ Image Management
    :hidden: 
 
    uploading_an_image_through_a_container_engine_client
-   obtaining_a_long-term_valid_docker_login_command
+   obtaining_a_long-term_docker_login_command
    obtaining_a_long-term_valid_containerd_pull_push_command
    pulling_an_image
    setting_image_attributes

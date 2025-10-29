@@ -20,13 +20,13 @@ What Protocol Is Used to Push Images to SWR When I Run the docker push Command?
 
 HTTPS is used.
 
-Will an Image Be Overwritten If I Push an Image That Have the Same Name and Tag with it?
-----------------------------------------------------------------------------------------
+Will an Image Be Overwritten If I Push an Image That Has the Same Name and Tag with it?
+---------------------------------------------------------------------------------------
 
-Yes, the original image will be overwritten.
+Yes. The image will be overwritten.
 
-What Is the Maximum Size of an SWR Layer?
------------------------------------------
+What Is the Maximum Size of an Image Layer?
+-------------------------------------------
 
 If you use the container engine client to push images to SWR, each image layer cannot exceed 10 GB.
 

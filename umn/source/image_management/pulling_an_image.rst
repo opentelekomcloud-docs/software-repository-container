@@ -64,7 +64,7 @@ containerd
 
       |image2|
 
-   -  If the command was copied from the **Pull/Push** tab, run it as follows (replace *{Tag}* with the new image tag).
+   -  If the command was copied from the **Pull/Push** tab, run it as follows. Change the organization name, image name, and tag to those of the image to be uploaded.
 
       |image3|
 

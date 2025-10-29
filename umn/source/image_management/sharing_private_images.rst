@@ -44,9 +44,9 @@ Procedure
       +-------------+-------------------------------------------------------------------------------------------------------------------------+
       | Valid Until | Set a validity period. If you want the image to be permanently accessible to the account, select **Permanently valid**. |
       +-------------+-------------------------------------------------------------------------------------------------------------------------+
-      | Description | Enter a maximum of 1,000 characters.                                                                                    |
-      +-------------+-------------------------------------------------------------------------------------------------------------------------+
       | Permission  | Only the **Pull** permission is supported currently.                                                                    |
+      +-------------+-------------------------------------------------------------------------------------------------------------------------+
+      | Description | Enter a maximum of 1,000 characters.                                                                                    |
       +-------------+-------------------------------------------------------------------------------------------------------------------------+
 
 #. To view all the images that you have shared, choose **My Images** in the navigation pane, click the **Private Images** tab, and select **My shared images**.

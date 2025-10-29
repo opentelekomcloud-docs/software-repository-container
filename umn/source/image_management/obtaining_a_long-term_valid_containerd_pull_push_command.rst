@@ -21,7 +21,7 @@ Procedure
 
 #. Obtain the programmatic access permission by referring to :ref:`1 <swr_01_1000__li122491614174210>`.
 
-#. Obtain the resource space name, image repository address, AK, and login key by referring to :ref:`2 <swr_01_1000__li5768123671815>` to :ref:`4 <swr_01_1000__li132430753010>`.
+#. Obtain the resource space name, image repository address, AK, and login key by referring to :ref:`5 <swr_01_1000__li5768123671815>` to :ref:`6 <swr_01_1000__li132430753010>`.
 
 #. Concatenate the obtained information to form a long-term valid containerd command.
 
@@ -29,13 +29,13 @@ Procedure
 
    **ctr image pull --user** *[Resource space name]* **@**\ *[AK]*\ **:** *[Login key]* *[Image repository address]*
 
-   In the command, the resource space name and image repository address are obtained in :ref:`2 <swr_01_1000__li5768123671815>`, the AK in :ref:`3 <swr_01_1000__li1863783911295>`, and the login key in :ref:`4 <swr_01_1000__li132430753010>`.
+   In the command, the resource space name and image repository address are obtained in :ref:`5 <swr_01_1000__li5768123671815>`, the AK in :ref:`2 <swr_01_1000__li1863783911295>`, and the login key in :ref:`6 <swr_01_1000__li132430753010>`.
 
    2. Image push command
 
    **ctr image push --user** *[Resource space name]* **@**\ *[AK]*\ **:** *[Login key]* *[Image repository address]*
 
-   In the command, the resource space name and image repository address are obtained in :ref:`2 <swr_01_1000__li5768123671815>`, the AK in :ref:`3 <swr_01_1000__li1863783911295>`, and the login key in :ref:`4 <swr_01_1000__li132430753010>`.
+   In the command, the resource space name and image repository address are obtained in :ref:`5 <swr_01_1000__li5768123671815>`, the AK in :ref:`2 <swr_01_1000__li1863783911295>`, and the login key in :ref:`6 <swr_01_1000__li132430753010>`.
 
    .. note::
 

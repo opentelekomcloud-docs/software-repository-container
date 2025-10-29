@@ -27,7 +27,7 @@ If you are not an SWR admin user, you can request an SWR admin user to grant you
 
 -  Example 2: An SWR administrator wants to grant an external user the permission to push images to the organization, but the user is not allowed to log in to the console and can only push images through the container engine client.
 
-   Solution: On the **Users** tab page of the details page of the organization, the SWR administrator grants the **edit** permission to the user. In IAM, the administrator sets **Access Type** to **Programmatic access**.
+   Solution: On the **Users** tab of the details page of the organization, the SWR administrator grants the **edit** permission to the user. In IAM, the administrator sets **Access Type** to **Programmatic access**.
 
 Authorization Method
 --------------------
@@ -58,7 +58,7 @@ Granting Permissions for a Specific Image
 To allow users to read, write, and manage a specific image, grant corresponding permissions to them on the details page of this image.
 
 #. Log in to the SWR console.
-#. In the navigation pane, choose **My Images** and click the desired image.
+#. In the navigation pane, choose **My Images**. Then click the name of the target image.
 #. On the image details page, click the **Permissions** tab.
 #. Click **Grant Permission**. Select **Read/Edit/Manage** next to the user name to grant corresponding permissions.
 

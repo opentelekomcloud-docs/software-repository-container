@@ -2,17 +2,18 @@
 
 .. _swr_01_1000:
 
-Obtaining a Long-Term Valid Docker Login Command
-================================================
+Obtaining a Long-Term Docker Login Command
+==========================================
 
 Scenario
 --------
 
+.. caution::
+
+   -  Keep the above commands secure.
+   -  For security purposes, you are advised to obtain the commands in a development environment.
+
 This section describes how to obtain a Docker login command that is valid for a year.
-
-.. note::
-
-   For security purposes, you are advised to obtain the command in a development environment.
 
 Process
 -------
@@ -25,12 +26,13 @@ You can obtain a long-term valid login command as the following process:
 
    **Figure 1** Process
 
-Procedure
----------
+
+Obtaining a Long-Term Docker Login Command
+------------------------------------------
 
 #. .. _swr_01_1000__li122491614174210:
 
-   **Obtain the programmatic access permission. (If the current user has the permission, skip this step.)**
+   Obtain the programming access permission. (If you already have the programming access permission, skip this step.)
 
    a. Log in to the management console as an administrator.
    b. Click |image1| in the upper left corner and select a region and a project.
@@ -40,24 +42,16 @@ Procedure
    f. Click next to **Access Type**.
    g. Select **Programmatic access**. (You can select only programmatic access or both access types.)
 
-#. .. _swr_01_1000__li5768123671815:
-
-   Obtain the region, project name, and image repository address.
-
-   a. Log in to the management console, click your username in the upper right corner, and click **My Credentials**.
-   b. On the **Projects** tab page, search for the project corresponding to the current region.
-   c. Obtain the image repository address by referring to :ref:`1.b <swr_01_0011__li753764116129>`. The domain name at the end of the login command is the image repository address.
-
 #. .. _swr_01_1000__li1863783911295:
 
-   Obtain an AK/SK.
+   Obtain an AK/SK. (If you already have an AK/SK, skip this step.)
 
    .. note::
 
       The access key ID (AK) and secret access key (SK) are a pair of access keys used together to authenticate users who wish to make API requests. The AK/AS pair provides functions similar to a password. If you already have an AK/SK, skip this step.
 
    a. Log in to the management console, click your username in the upper right corner, and click **My Credentials**.
-   b. On the **Access Keys** tab page, click **Add Access Key**.
+   b. On the **Access Keys** tab, click **Add Access Key**.
    c. Enter the login password and verification code sent to your mailbox or mobile phone.
    d. Download the access key, which includes the AK and SK.
 
@@ -65,13 +59,25 @@ Procedure
 
          Keep the access key secure and do not disclose it to any unauthorized personnel.
 
+#. Log in to the SWR console.
+
+#. Click **Generate Login Command**. On the **Long-Term Login Command** tab, click **Import Access Keys** to upload **credentials.csv** or enter the **Access Key ID** and **Secret Access Key** contained in **credentials.csv** obtained in :ref:`2 <swr_01_1000__li1863783911295>`. Click **Generate Command**. No further action is required. If the **Long-Term Login Command** tab is not displayed on the console, skip this step and manually combine the long-term login command.
+
+#. .. _swr_01_1000__li5768123671815:
+
+   Obtain the region, project name, and image repository address.
+
+   a. Log in to the management console, click your username in the upper right corner, and click **My Credentials**.
+   b. On the **Projects** tab, search for the project corresponding to the current region.
+   c. Obtain the image repository address by referring to :ref:`1.b <swr_01_0011__li753764116129>`. The domain name at the end of the login command is the image repository address.
+
 #. .. _swr_01_1000__li132430753010:
 
    Log in to a Linux PC and run the following command to obtain the login key:
 
    **printf "$AK" \| openssl dgst -binary -sha256 -hmac "$SK" \| od -An -vtx1 \| sed 's/[ \\n]//g' \| sed 'N;s/\\n//'**
 
-   In the command, *$AK* and *$SK* indicate the AK and SK obtained in :ref:`3 <swr_01_1000__li1863783911295>`.
+   In the command, *$AK* and *$SK* indicate the AK and SK obtained in :ref:`2 <swr_01_1000__li1863783911295>`.
 
 
    .. figure:: /_static/images/en-us_image_0165729699.png
@@ -83,13 +89,12 @@ Procedure
 
    **docker login -u** [*Regional project name*]\ **@**\ [*AK*] **-p** [*Login key*] [*Image repository address*]
 
-   In the command, the regional project name and image repository address are obtained in :ref:`2 <swr_01_1000__li5768123671815>`, the AK in :ref:`3 <swr_01_1000__li1863783911295>`, and the login key in :ref:`4 <swr_01_1000__li132430753010>`.
+   In the command, the regional project name and image repository address are obtained in :ref:`5 <swr_01_1000__li5768123671815>`, the AK in :ref:`2 <swr_01_1000__li1863783911295>`, and the login key in :ref:`6 <swr_01_1000__li132430753010>`.
 
    .. note::
 
-      The login key is encrypted and cannot be decrypted. Therefore, other users cannot obtain the SK from -p.
-
-      The login command can be used on other devices.
+      -  The login key is encrypted and cannot be decrypted. Therefore, other users cannot obtain the SK from -p.
+      -  The login command can be used on other devices.
 
 #. Run the **history -c** command to clear the operation records.
 

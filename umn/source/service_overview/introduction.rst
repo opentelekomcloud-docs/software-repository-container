@@ -33,12 +33,12 @@ Features
 Accessing SWR
 -------------
 
-The cloud platform provides a web-based management console and HTTPS-based APIs through which you can access the SWR service.
+The cloud platform provides a web-based management console and HTTPS-based APIs through which you can access SWR.
 
 -  Using APIs
 
-   If you want to integrate SWR into a third-party system for secondary development, use APIs to access SWR. For details, see *SWR API Reference*.
+   If you want to integrate SWR into a third-party system for secondary development, use APIs to access SWR. For details, see *SoftWare Repository for Container API Reference*.
 
 -  Using the management console
 
-   Use this mode if you do not want to integrate SWR into a third-party system.
+   For other operations, access SWR through the management console.
