@@ -63,7 +63,7 @@ When using a browser to access a containerized application built from a Nginx im
    In the preceding instructions:
 
    -  **FROM**: creates a layer from the base image. A valid Dockerfile must start with a **FROM** instruction. In this example, the **Nginx** image is used as the base image.
-   -  **RUN**: executes a command to create a new layer. One of its syntax forms is RUN <command>. In this example, the **echo** command is executed to display **Hello, SWR!**
+   -  **RUN**: executes a command to create a layer. One of its syntax forms is RUN <command>. In this example, the **echo** command is executed to display **Hello, SWR!**
 
    Save the changes and exit.
 

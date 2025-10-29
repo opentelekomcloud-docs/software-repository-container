@@ -10,7 +10,7 @@ Service Overview
 -  :ref:`Application Scenarios <swr_03_0004>`
 -  :ref:`Basic Concepts <swr_03_0003>`
 -  :ref:`Notes and Constraints <swr_03_0007>`
--  :ref:`Permissions <swr_03_0020>`
+-  :ref:`Permissions <swr_03_0005>`
 -  :ref:`Related Services <swr_03_0006>`
 
 .. toctree::
@@ -22,5 +22,5 @@ Service Overview
    application_scenarios
    basic_concepts
    notes_and_constraints
-   permissions/index
+   permissions
    related_services

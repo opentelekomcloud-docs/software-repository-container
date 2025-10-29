@@ -11,5 +11,6 @@ Software Repository for Containers - User Guide
    basics_of_docker
    organization_management
    image_management/index
+   auditing/index
    faqs/index
    change_history
