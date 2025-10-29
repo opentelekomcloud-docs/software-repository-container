@@ -6,7 +6,7 @@ Appendixes
 ==========
 
 -  :ref:`Status Codes <swr_02_0023>`
--  :ref:`Error Codes <swr_02_0024>`
+-  :ref:`Error Codes <errorcode>`
 
 .. toctree::
    :maxdepth: 1

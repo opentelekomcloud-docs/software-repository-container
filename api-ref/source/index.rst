@@ -6,6 +6,6 @@ Software Repository for Containers - API Reference
    :maxdepth: 1
 
    api_usage_guidelines
-   api/index
+   apis/index
    appendixes/index
    change_history
